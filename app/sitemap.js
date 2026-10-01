@@ -1,0 +1,1 @@
+export default function sitemap() { const base = 'https://veloce.example'; return ['','shop','collections','about','sustainability','journal','contact','wishlist','account','cart'].map((route) => ({ url: `${base}/${route}`, lastModified: new Date() })); }
