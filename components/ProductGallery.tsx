@@ -81,7 +81,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
   };
 
   return (
-    <div ref={root}>
+    <div ref={root} className="min-w-0">
       {/* desktop */}
       <div className="hidden gap-4 lg:grid lg:grid-cols-[5.5rem_1fr]">
         <div className="flex flex-col gap-3" role="group" aria-label="Product images">

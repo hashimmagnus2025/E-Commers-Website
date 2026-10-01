@@ -24,10 +24,10 @@ const toggle = (list: string[], v: string) => (list.includes(v) ? list.filter((x
 
 function Group({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <fieldset className="border-b hairline pb-7 pt-6 first:pt-0">
-      <legend className="eyebrow mb-4 w-full">{title}</legend>
+    <div role="group" aria-label={title} className="border-b hairline pb-7 pt-6 first:pt-0">
+      <p className="eyebrow mb-4" aria-hidden="true">{title}</p>
       {children}
-    </fieldset>
+    </div>
   );
 }
 

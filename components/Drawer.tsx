@@ -56,7 +56,7 @@ export function Drawer({ open, onClose, title, children, footer }: Props) {
   );
 
   return (
-    <div ref={root} role="dialog" aria-modal="true" aria-label={title} aria-hidden={!open} inert={!open} className="fixed inset-0 z-[125]">
+    <div ref={root} role="dialog" aria-modal="true" aria-label={title} aria-hidden={!open} inert={!open} className="fixed inset-0 z-[125] overflow-hidden">
       <button type="button" tabIndex={-1} aria-label={`Close ${title.toLowerCase()}`} data-d-scrim onClick={onClose} className="absolute inset-0 bg-ink/45" />
       <div
         data-d-panel

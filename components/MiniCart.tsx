@@ -51,7 +51,7 @@ export function MiniCart() {
   const remaining = Math.max(0, FREE_SHIPPING - subtotal);
 
   return (
-    <div ref={root} role="dialog" aria-modal="true" aria-label="Your bag" aria-hidden={!bagOpen} inert={!bagOpen} className="fixed inset-0 z-[125]">
+    <div ref={root} role="dialog" aria-modal="true" aria-label="Your bag" aria-hidden={!bagOpen} inert={!bagOpen} className="fixed inset-0 z-[125] overflow-hidden">
       <button type="button" tabIndex={-1} aria-label="Close bag" data-c-scrim onClick={close} className="absolute inset-0 bg-ink/45" />
       <aside data-c-panel className="absolute right-0 top-0 flex h-full w-full flex-col bg-ivory text-ink sm:w-[30rem]">
         <div className="flex items-center justify-between px-6 py-5">
