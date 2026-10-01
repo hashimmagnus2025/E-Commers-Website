@@ -37,7 +37,9 @@ export function HorizontalWorld() {
     });
   });
 
+  /* The wrapper stays React-owned: ScrollTrigger's pin-spacer is inserted inside it, never beside React's nodes. */
   return (
+    <div>
     <section ref={root} aria-labelledby="world-title" className="relative bg-ink text-paper lg:h-screen">
       <div className="flex flex-col justify-center lg:h-screen">
         <div className="gutter flex items-end justify-between pb-8 pt-20 lg:absolute lg:left-0 lg:right-0 lg:top-0 lg:z-10 lg:pb-0 lg:pt-24 lg:pointer-events-none">
@@ -77,5 +79,6 @@ export function HorizontalWorld() {
         </div>
       </div>
     </section>
+    </div>
   );
 }

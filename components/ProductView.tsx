@@ -59,7 +59,7 @@ export function ProductView({ product }: { product: Product }) {
   const discount = product.compareAtPrice ? Math.round((1 - product.price / product.compareAtPrice) * 100) : 0;
 
   return (
-    <div ref={root} className="gutter grid gap-10 pb-24 pt-[calc(var(--nav-h)+1.25rem)] lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16 xl:gap-24">
+    <div ref={root} className="gutter grid grid-cols-[minmax(0,1fr)] gap-10 pb-24 pt-[calc(var(--nav-h)+1.25rem)] lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16 xl:gap-24">
       <ProductGallery images={product.images} name={product.name} />
 
       <div className="lg:sticky lg:top-[calc(var(--nav-h)+1.5rem)] lg:self-start lg:pb-10">
